@@ -15,7 +15,11 @@ body{
     text-align: center;
 }
 .crust{
-    margin-top:10%;
+    margin-top:5%;
+    padding:5%;
+}
+.toppings{
+    padding:5%
 }
 .box{
     position: absolute;
