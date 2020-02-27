@@ -21,6 +21,9 @@ body{
 .toppings{
     padding:5%
 }
+.number{
+    padding:5%;
+}
 .box{
     position: absolute;
     top:50%;
