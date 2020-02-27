@@ -23,39 +23,5 @@ body{
 }
 .number{
     padding-top:5%;
-}
-.box{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    background-color: rgb(17, 16, 16);
-}
-.box span{
-    display:block;
-    background-color: rgb(17, 16, 16);
-    width:20px;
-    height:20px;
-    border-bottom: 1px solid #fff;
-    border-right:1px solid #fff;
-    transform:rotate(45deg);
-    animation:animate 2s infinite;
-    
-}
-@keyframes animate 
-{
-    0%
-    {
-        opacity:0;
-
-    }   
-    50%
-    {
-        opacity:1;
-        
-    }
-    100%
-    {
-        opacity:0;   
-    }
+    padding-bottom: 2%;
 }
