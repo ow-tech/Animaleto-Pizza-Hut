@@ -22,6 +22,6 @@ body{
     padding-top:5%;
     padding-bottom: 2%;
 }
-.row{
+#row{
     background-color: rgb(177, 8, 8);
 }
