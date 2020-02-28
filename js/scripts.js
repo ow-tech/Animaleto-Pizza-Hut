@@ -3,7 +3,12 @@ $(document).ready(function(){
 		var psize=$("input[type='radio']:checked").val();
 		var crust =$(".custom-select option:selected").val();
 		var toppings =$ ("input[type='checkbox']:checked").val();
-		$("p#pizza").html(psize + crust+ toppings);
+		var number =$("#getnumber option:selected").val();
+		// var total=$(function(){
+		// 	return parseInt(psize) + parseInt(crust) + parseInt(toppings)
+		// }) 
+		var total= (parseInt(psize) + parseInt(crust) + parseInt(toppings))*parseInt(number);
+		$("p#pizza").html ("So far, your pizza costs you Ksh.g" + total );
 	});
-	
+
 })
