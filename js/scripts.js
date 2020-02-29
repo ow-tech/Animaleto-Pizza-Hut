@@ -22,18 +22,13 @@ $(document).ready(function(){
 		})
 		$("button#checkout").click(function(){
 			var finalTotal= total+200
-		 if(where.length){
-				alert ("Pizza Costs Ksh." +finalTotal);
-			}
-		 else{
-
-			}
-			// if(where.length>1){
-			// 	alert ("Pizza Costs "+total+200);
-			// }
-			// else{
-			// 	alert (total);
-			// }
+			if(where.length>1){
+				 alert ("Pizza Costs Ksh." +finalTotal);
+			 }
+			else{
+				alert("Pizza Costs Ksh."+total)
+ 
+			 }
 		})
 	});
 
