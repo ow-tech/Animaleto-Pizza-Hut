@@ -24,8 +24,9 @@ $(document).ready(function(){
 			alert(" Please Checkout for your order to be Processed")
 		})
 		$("button#checkout").click(function(){
+			$("p#pizza").fadeOut();
 			var finalTotal= total+200
-			if(where.length>1){
+			if(where===""){
 				 alert ("Pizza Costs Ksh." +finalTotal);
 			 }
 			else{
