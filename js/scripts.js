@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function(){
 	$("button#takeorder").click(function(){
 		var psize=$("input[type='radio']:checked").val();

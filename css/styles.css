@@ -3,7 +3,7 @@ body{
     padding:0%;
 }
 .carousel-inner img{
-    height:600px;
+    height:650px;
 }
 .size{
     width:500px;
@@ -24,4 +24,7 @@ body{
 }
 #row{
     background-color: rgb(177, 8, 8);
+}
+.checkout{
+    padding:2%;
 }
