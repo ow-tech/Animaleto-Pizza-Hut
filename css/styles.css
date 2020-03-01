@@ -27,9 +27,15 @@ body{
     padding-top:5%;
     padding-bottom: 2%;
 }
-#row{
-    background-color: rgb(177, 8, 8);
+/* #table{
+    height:30px;
+} */
+td{
+    color:green;
 }
 .checkout{
     padding:2%;
+}
+#row{
+    background-color: rgb(177, 8, 8);
 }
