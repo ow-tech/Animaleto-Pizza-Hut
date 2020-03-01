@@ -1,5 +1,11 @@
+//Business logic
+function MyPizza(psize, crust, toppings){
+	this.psize=psize;
+	this.crust=crust;
+	this.toppings=toppings;
+}
 
-
+//user Interface (Front-end)
 
 $(document).ready(function(){
 	$("button#takeorder").click(function(){
@@ -7,8 +13,9 @@ $(document).ready(function(){
 		var crust =$(".custom-select option:selected").val();
 		var toppings =$ ("input[type='checkbox']:checked").val();
 		var number =$("#getnumber option:selected").val();
+		var myOrder = new MyPizza(psize, crust, toppings);
 		var total= (parseInt(psize) + parseInt(crust) + parseInt(toppings))*parseInt(number);
-		$("p#pizza").html ("So far, your pizza costs you Ksh." + total );
+		$("p#pizza").html ("Your Pize size costs Ksh."+myOrder.psize+ "\n"+ "Your Pizza Crust Costs Ksh."+crust );
 
 		$("button#deliver").click(function(){
 			alert("delivery cost Ksh. 200.")
@@ -17,6 +24,7 @@ $(document).ready(function(){
 				alert("please Enter your Location!!!\n By Clicking YES Button Again!!!")
 			}
 			else{
+				var where = true
 				alert("Your Pizza will be delivered to "+ where + " in about 1 hour.\n Please CheckOut to get total price and for your order to be processed")
 			}
 		})
@@ -26,7 +34,7 @@ $(document).ready(function(){
 		$("button#checkout").click(function(){
 			$("p#pizza").fadeOut();
 			var finalTotal= total+200
-			if(where===""){
+			if(where=true){
 				 alert ("Pizza Costs Ksh." +finalTotal);
 			 }
 			else{
