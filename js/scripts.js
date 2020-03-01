@@ -17,8 +17,7 @@ $(document).ready(function(){
 		var total= (parseInt(psize) + parseInt(crust) + parseInt(toppings))*parseInt(number);
 		// $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
 		// console.log(newOrder);
-		$("p#pizza").html ("Your Pize size costs Ksh."+myOrder.psize+ "\n"+ "Your Pizza Crust Costs Ksh."+crust );
-
+		$("p#pizza").html ('<tr><td id=psize>'+myOrder.psize + '</td><td id="crust">'+ myOrder.crust + '</td><td id="toppings">' + myOrder.toppings + '</td><td id="total">' +total+'</td></tr>');
 		$("button#deliver").click(function(){
 			alert("delivery cost Ksh. 200.")
 			var where= prompt("Please Enter your location:\n Must Be within Mombasa.")
