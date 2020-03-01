@@ -31,7 +31,7 @@ $(document).ready(function(){
 				alert("Please Checkout for your order to be Processed")
 			})
 			$("button#checkout").click(function(){
-				$("p#pizza").fadeOut();
+				$("#pizza").fadeOut();
 				var finalTotal= total+200
 				console.log(where.length)
 				if(where.length>1){
