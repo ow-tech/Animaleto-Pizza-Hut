@@ -105,8 +105,26 @@
 					<option value="5">5</option>
 				</select>
 			</div>
-			<button type="button" id="takeorder" class="btn btn-primary">ORDER</button>
-			<p id="pizza"></p>
+			<div class="row">
+				<div class="col-md-6">
+					<button type="button" id="takeorder" class="btn btn-primary">ORDER</button>
+				</div>
+				<div class="col-md-6">
+					<table class="table table-sm">
+						<tr>
+							<th>Pizza Size Cost</th>
+							<th>Crust Cost</th>
+							<th>Toppings Cost</th>
+							<th>Total Cost</th>
+						</tr>
+						<td id="psize"></td>
+						<td id="crust"></td>
+						<td id="toppings"></td>
+						<td id="total"></td>
+					</table>
+					<!-- <p id="pizza"></p> -->
+				</div>
+			</div>
 		</div>
 		<div class="delivery">
 			<h4>Do you want your pizza delivered??</h4>

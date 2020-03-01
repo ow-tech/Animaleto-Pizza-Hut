@@ -15,6 +15,8 @@ $(document).ready(function(){
 		var number =$("#getnumber option:selected").val();
 		var myOrder = new MyPizza(psize, crust, toppings);
 		var total= (parseInt(psize) + parseInt(crust) + parseInt(toppings))*parseInt(number);
+		// $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
+		// console.log(newOrder);
 		$("p#pizza").html ("Your Pize size costs Ksh."+myOrder.psize+ "\n"+ "Your Pizza Crust Costs Ksh."+crust );
 
 		$("button#deliver").click(function(){
