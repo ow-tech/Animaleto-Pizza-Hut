@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Animaleto</title>
+		<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -76,6 +77,7 @@
 				</div>
 			</div>
 			<div class="toppings">
+				<img src="images/toppings icon.png">
 				<h3>Choose Toppings for your Pizza</h3>
 				<div class="form-check form-check-inline">
 					<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="200">
@@ -114,34 +116,42 @@
 					<option value="5">5</option>
 				</select>
 			</div>
+			<img src="images/order icon.png">
 			<button type="button" id="takeorder" class="btn btn-outline-info">ORDER</button>
 		</div>
 		<div class="delivery">
-			<h4>Do you want your pizza delivered??</h4>
+			<h4>Delivery</h4>
+			<img src="images/delivery icon.png">
 			<strong>Delivery is ksh.200</strong><br>
       <button type="button" id="deliver" class="btn btn-outline-secondary">YES</button><br><br>
 			<button type="button" id="no" class="btn btn-outline-danger">NO</button><br><br>
 		</div>
-		<div id="table">
-			<table class="table table-sm">
-				<tr>
-					<th>Pizza Size Cost</th>
-					<th>Crust Cost</th>
-					<th>Toppings Cost</th>
-					<th>Number of Pizza(s)</th>
-					<th>Total Cost</th>
-				</tr>
-				<tbody id="pizza">
-					<td id="psize"></td>
-					<td id="crust"></td>
-					<td id="toppings"></td>
-					<td id="number"></td>
-					<td id="total"></td>
-				</tbody>
-			</table>
-		</div>
-		<div class="checkout">
-			<button type="submit" value="submit" id="checkout" class="btn btn-outline-success">CheckOut</button>
+		<!-- checkout section -->
+		<div class="row">
+			<div class="col-md-4 checkout">
+				<button type="button" id="checkout" class="btn btn-outline-success">CheckOut</button>
+			</div>
+			<div class="col-md-4">
+				<img src="images/checkout icon.png">
+			</div>
+			<div class="col-md-4" id="table">
+				<table class="table ">
+					<tr>
+						<th>Pizza Size Cost</th>
+						<th>Crust Cost</th>
+						<th>Toppings Cost</th>
+						<th>Number of Pizza(s)</th>
+						<th>Total Cost</th>
+					</tr>
+					<tbody id="pizza">
+						<td id="psize"></td>
+						<td id="crust"></td>
+						<td id="toppings"></td>
+						<td id="number"></td>
+						<td id="total"></td>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 	<div id="row" class="container-fluid">
@@ -166,7 +176,6 @@
 						Loconical Plaza.</p>
 			</div>
 		</div>
-	</div>
 	</div>
 </body>
 </html>

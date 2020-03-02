@@ -34,6 +34,7 @@ $(document).ready(function(){
 			alert("Please Checkout for your order to be Processed")
 		})
 		$("button#checkout").click(function(){
+			$("#table").slideDown(2000);
 			var finalTotal= total+200;
 			var myOrder = new MyPizza(psize, crust, toppings, number);
 			$("#pizza").html('<tr><td id=psize>'+ myOrder.psize + '</td><td id="crust">'+ myOrder.crust + '</td><td id="toppings">' + myOrder.toppings + '</td><td id="number">' + myOrder.number + '</td><td id="total">' +finalTotal+'</td></tr>');
