@@ -64,13 +64,13 @@
 			</div>
 			<!-- Crust section -->
 			<div>
-				<h3>Choose Your Crust</h3>
+				<h4>Choose Your Crust</h4>
 				<img id="crust"src="images/type-pizza-crust-for-select-art-vector-26126596.jpg">
-				<div class="row crust">
+				<div class="row crust center">
 					<div class="form-group-col-xm-4">
-						<select class="custom-select">
-							<option class="crust" value="200">Crispy Crust @Ksh.200</option>
-							<option class="crust" value="200">Gluten-free Crust @ksh.200</option>
+						<select class="custom-select inline-block">
+							<option class="crust" value="200">Crispy Crust @ Ksh.200</option>
+							<option class="crust" value="150">Gluten-free @ ksh.200</option>
 							<option class="crust" value="250">Stuffed Crust @ksh.250</option>
 						</select>
 					</div>
@@ -78,7 +78,7 @@
 			</div>
 			<div class="toppings">
 				<img src="images/toppings icon.png">
-				<h3>Choose Toppings for your Pizza</h3>
+				<h4>Choose Toppings for your Pizza</h4>
 				<div class="form-check form-check-inline">
 					<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="200">
 					<label class="form-check-label" for="inlineCheckbox1">Pepperoni @Ksh.200</label>
@@ -116,23 +116,37 @@
 					<option value="5">5</option>
 				</select>
 			</div>
-			<img src="images/order icon.png">
+			<img src="images/order icon.png" width="150">
 			<button type="button" id="takeorder" class="btn btn-outline-info">ORDER</button>
 		</div>
+
+		<!-- Delivery Section -->
+
 		<div class="delivery">
 			<h4>Delivery</h4>
-			<img src="images/delivery icon.png">
+			<img src="images/delivery icon.png" width="100px">
 			<strong>Delivery is ksh.200</strong><br>
-      <button type="button" id="deliver" class="btn btn-outline-secondary">YES</button><br><br>
-			<button type="button" id="no" class="btn btn-outline-danger">NO</button><br><br>
+      <button type="button" value="200" id="deliver" class="btn btn-outline-secondary delivered">YES</button><br>
+			<button type="button" value="500" id="no" class="btn btn-outline-danger delivered">NO</button><br><br>
 		</div>
+		<!-- <div class="delivery">
+			<h4>Delivery</h4>
+			<img src="images/delivery icon.png" width="100px">
+			<select class="browser-default custom-select" id="getDelivery">
+				<option value="200">Yes</option>
+				<option value="0">no</option>
+			</select>
+			<button type="button" value="200" id="deliver" class="btn btn-outline-secondary">Get Delivery Services</button>
+		</div> -->
+
 		<!-- checkout section -->
+
 		<div class="row">
+			<div class="col-md-4">
+				<img src="images/checkout icon.png" width="100px">
+			</div>
 			<div class="col-md-4 checkout">
 				<button type="button" id="checkout" class="btn btn-outline-success">CheckOut</button>
-			</div>
-			<div class="col-md-4">
-				<img src="images/checkout icon.png">
 			</div>
 			<div class="col-md-4" id="table">
 				<table class="table ">
@@ -141,13 +155,15 @@
 						<th>Crust Cost</th>
 						<th>Toppings Cost</th>
 						<th>Number of Pizza(s)</th>
-						<th>Total Cost</th>
+						<th>Delivery Cost</th>
+						<th>Grand Total</th>
 					</tr>
 					<tbody id="pizza">
 						<td id="psize"></td>
 						<td id="crust"></td>
 						<td id="toppings"></td>
 						<td id="number"></td>
+						<td id="deliveries"></td>
 						<td id="total"></td>
 					</tbody>
 				</table>

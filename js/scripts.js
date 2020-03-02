@@ -1,9 +1,10 @@
 //Business logic
-function MyPizza(psize, crust, toppings, number){
+function MyPizza(psize, crust, toppings, number, deliveries){
 	this.psize=psize;
 	this.crust=crust;
 	this.toppings=toppings;
 	this.number=number;
+	this.deliveries=deliveries;
 }
 
 //user Interface (Front-end)
@@ -14,6 +15,7 @@ $(document).ready(function(){
 		var crust =$(".custom-select option:selected").val();
 		var toppings =$ ("input[type='checkbox']:checked").val();
 		var number =$("#getnumber option:selected").val();
+		var deliveries = $(".delivered").val();
 		// var myOrder = new MyPizza(psize, crust, toppings, number);
 		var total= (parseInt(psize) + parseInt(crust) + parseInt(toppings))*parseInt(number);
 		alert("This is the cost for your pizza. Ksh."+total)
@@ -26,18 +28,18 @@ $(document).ready(function(){
 				alert("Please Enter your Location!!!\n By Clicking YES Button Again!!!")
 			}
 			else{
-				alert("Your Pizza will be delivered to "+ where + " in about 1 hour.\n Please CheckOut to get total price and for your order to be processed")
+				alert("Your order will be delivered to "+ where + " in about 1 hour.\n Please CheckOut to get total price and for your order to be processed")
 			}
-		
+
 		});
 		$("button#no").click(function(){
 			alert("Please Checkout for your order to be Processed")
 		})
 		$("button#checkout").click(function(){
 			$("#table").slideDown(2000);
-			var finalTotal= total+200;
-			var myOrder = new MyPizza(psize, crust, toppings, number);
-			$("#pizza").html('<tr><td id=psize>'+ myOrder.psize + '</td><td id="crust">'+ myOrder.crust + '</td><td id="toppings">' + myOrder.toppings + '</td><td id="number">' + myOrder.number + '</td><td id="total">' +finalTotal+'</td></tr>');
+			var finalTotal= total + parseInt(deliveries);
+			var myOrder = new MyPizza(psize, crust, toppings, number,deliveries);
+			$("#pizza").html('<tr><td id=psize>'+ myOrder.psize + '</td><td id="crust">'+ myOrder.crust + '</td><td id="toppings">' + myOrder.toppings + '</td><td id="number">' + myOrder.number + '</td><td id="deliveries">' + myOrder.deliveries + '</td><td id="toppings">'+ finalTotal+'</td></tr>');
 		});
 	});
 

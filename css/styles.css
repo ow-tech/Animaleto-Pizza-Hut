@@ -12,10 +12,16 @@ body{
 }
 h1{
     color:rgb(231, 3, 3);
-    font-family: 'Yeon Sung', ;
+    font-family: 'Yeon Sung';
 }
 .center{
     text-align: center;
+}
+.inline-block{
+    display:inline-block;
+    margin-left: 400px;
+    width: 200px;
+    /* text-align: center; */
 }
 .crust{
     margin-top:5%;
@@ -27,8 +33,17 @@ h1{
     padding:2%
 }
 .number{
+    width: 200px;
+    margin-left: 400px;
     padding-top:5%;
     padding-bottom: 2%;
+}
+.delivery{
+    text-align: center;
+    display:inline-block;
+    margin-bottom: 10px;
+    margin-left: 400px;
+    wi
 }
 #table{
     
