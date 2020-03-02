@@ -27,23 +27,16 @@ $(document).ready(function(){
 			else{
 				alert("Your Pizza will be delivered to "+ where + " in about 1 hour.\n Please CheckOut to get total price and for your order to be processed")
 			}
-			$("button#no").click(function(){
-				alert("Please Checkout for your order to be Processed")
-			})
-			$("button#checkout").click(function(){
-				$("#pizza").fadeOut();
-				var finalTotal= total+200
-				console.log(where.length)
-				if(where.length>1){
-					 alert ("Pizza Costs Ksh." +finalTotal);
-				 }
-				else{
-					alert("Pizza Costs Ksh."+total)
-	 
-				 }
-		})
 		
+		});
+		$("button#no").click(function(){
+			alert("Please Checkout for your order to be Processed")
 		})
+		$("button#checkout").click(function(){
+			$("#pizza").fadeOut();
+			var finalTotal= total+200
+				 alert ("Pizza Costs Ksh." +finalTotal);
+		});
 	});
 
 });

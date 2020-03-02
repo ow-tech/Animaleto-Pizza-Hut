@@ -15,21 +15,20 @@ body{
 }
 .crust{
     margin-top:5%;
-    padding:5%;
 }
 #crust{
     height: 400px;
 }
 .toppings{
-    padding:5%
+    padding:2%
 }
 .number{
     padding-top:5%;
     padding-bottom: 2%;
 }
-/* #table{
-    height:30px;
-} */
+#table{
+    height:100px;
+}
 td{
     color:green;
 }

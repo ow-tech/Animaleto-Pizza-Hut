@@ -46,6 +46,9 @@
 			<h3>Choose Your Pizza size</h3>
 			<img class="size" src="images/slx.jpg">
 			<br>
+
+			<!-- Selection of pizza size -->
+
 			<div class="custom-control custom-radio custom-control-inline">
 				<input type="radio" value="500" id="customRadioInline1" name="customRadioInline1" class="custom-control-input psize">
 				<label class="custom-control-label" for="customRadioInline1">Small @Ksh.500</label>
@@ -58,15 +61,19 @@
 				<input type="radio"value="1200" id="customRadioInline3" name="customRadioInline1" class="custom-control-input psize">
 				<label class="custom-control-label" for="customRadioInline3">Large @Ksh.1200</label>
 			</div>
-			<div class="crust">
+			<!-- Crust section -->
+			<div>
 				<h3>Choose Your Crust</h3>
 				<img id="crust"src="images/type-pizza-crust-for-select-art-vector-26126596.jpg">
-				<select class="custom-select">
-					<!-- <option selected>Open this select menu</option> -->
-					<option class="crust" value="200">Crispy Crust @Ksh.200</option>
-					<option class="crust" value="200">Gluten-free Crust @ksh.200</option>
-					<option class="crust" value="250">Stuffed Crust @ksh.250</option>
-				</select>
+				<div class="row crust">
+					<div class="form-group-col-xm-4">
+						<select class="custom-select">
+							<option class="crust" value="200">Crispy Crust @Ksh.200</option>
+							<option class="crust" value="200">Gluten-free Crust @ksh.200</option>
+							<option class="crust" value="250">Stuffed Crust @ksh.250</option>
+						</select>
+					</div>
+				</div>
 			</div>
 			<div class="toppings">
 				<h3>Choose Toppings for your Pizza</h3>
@@ -95,6 +102,8 @@
 					<label class="form-check-label" for="inlineCheckbox6">Extra Cheese @ksh.200</label>
 				</div>
 			</div>
+
+			<!-- number of pizza section -->
 			<div class="number">
 				<h3>How many Pizza(s) do you want?</h3>
 				<select class="browser-default custom-select" id="getnumber">
@@ -105,38 +114,34 @@
 					<option value="5">5</option>
 				</select>
 			</div>
-			<div id="table"class="row">
-				<div class="col-md-6">
-					<button type="button" id="takeorder" class="btn btn-primary">ORDER</button>
-				</div>
-				<div class="col-md-6">
-					<table class="table table-sm">
-						<tr>
-							<th>Pizza Size Cost</th>
-							<th>Crust Cost</th>
-							<th>Toppings Cost</th>
-							<th>Number of Pizza(s)</th>
-							<th>Total Cost</th>
-						</tr>
-						<tbody id="pizza">
-							<td id="psize"></td>
-							<td id="crust"></td>
-							<td id="toppings"></td>
-							<td id="number"></td>
-							<td id="total"></td>
-						</tbody>
-					</table>
-				</div>
-			</div>
+			<button type="button" id="takeorder" class="btn btn-outline-info">ORDER</button>
+		</div>
+		<div id="table">
+			<table class="table table-sm">
+				<tr>
+					<th>Pizza Size Cost</th>
+					<th>Crust Cost</th>
+					<th>Toppings Cost</th>
+					<th>Number of Pizza(s)</th>
+					<th>Total Cost</th>
+				</tr>
+				<tbody id="pizza">
+					<td id="psize"></td>
+					<td id="crust"></td>
+					<td id="toppings"></td>
+					<td id="number"></td>
+					<td id="total"></td>
+				</tbody>
+			</table>
 		</div>
 		<div class="delivery">
 			<h4>Do you want your pizza delivered??</h4>
 			<strong>Delivery is ksh.200</strong><br>
-      <button type="button" id="deliver" class="btn btn-primary">YES</button><br><br>
-			<button type="button" id="no" class="bg-danger">NO</button><br><br>
+      <button type="button" id="deliver" class="btn btn-outline-secondary">YES</button><br><br>
+			<button type="button" id="no" class="btn btn-outline-danger">NO</button><br><br>
 		</div>
 		<div class="checkout">
-			<button type="button" id="checkout" class="btn btn-secondary">CheckOut</button>
+			<button type="submit" value="submit" id="checkout" class="btn btn-outline-success">CheckOut</button>
 		</div>
 	</div>
 	<div id="row" class="container-fluid">
@@ -161,6 +166,7 @@
 						Loconical Plaza.</p>
 			</div>
 		</div>
+	</div>
 	</div>
 </body>
 </html>
